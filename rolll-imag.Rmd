@@ -1,0 +1,11 @@
+---
+title: "roll-imag"
+author: "ningyuxi"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+## 在Rmarkdown的代码块中以滚动的方式显示外源图片, 有以下两种方法
+### 1.直接在在文本中写入html语句
+
+

@@ -9,13 +9,13 @@ output: html_document
 
 ### 1.直接在文本中写入html语句
 
-``` html
+
 <div style="white-space: nowrap; overflow-x: auto; width: 100%;">
   <img src="./picture/bases.content.png" style="display: inline-block; height: 300px;" />
   <img src="./picture/bases.quality.png" style="display: inline-block; height: 300px;" />
   <img src="./picture/gc.distribution.png" style="display: inline-block; height: 300px;"/>
 </div>
-```
+
 
 效果如下：
 

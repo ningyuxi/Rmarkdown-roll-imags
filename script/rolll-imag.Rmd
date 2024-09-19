@@ -9,23 +9,23 @@ output: html_document
 
 ### 1.直接在文本中写入html语句
 
-
+``` html
 <div style="white-space: nowrap; overflow-x: auto; width: 100%;">
-  <img src="./picture/bases.content.png" style="display: inline-block; height: 300px;" />
-  <img src="./picture/bases.quality.png" style="display: inline-block; height: 300px;" />
-  <img src="./picture/gc.distribution.png" style="display: inline-block; height: 300px;"/>
+  <img src="../picture/bases.content.png" style="display: inline-block; height: 300px;" />
+  <img src="../picture/bases.quality.png" style="display: inline-block; height: 300px;" />
+  <img src="../picture/gc.distribution.png" style="display: inline-block; height: 300px;"/>
 </div>
-
+```
 
 效果如下：
 
 ::: {style="white-space: nowrap; overflow-x: auto; width: 100%;"}
-<img src="./picture/bases.content.png" style="display: inline-block; height: 300px;"/> <img src="./picture/bases.quality.png" style="display: inline-block; height: 300px;"/> <img src="./picture/gc.distribution.png" style="display: inline-block; height: 300px;"/>
+<img src="../picture/bases.content.png" style="display: inline-block; height: 300px;"/> <img src="../picture/bases.quality.png" style="display: inline-block; height: 300px;"/> <img src="../picture/gc.distribution.png" style="display: inline-block; height: 300px;"/>
 :::
 
 ### 2.在代码块中定义函数
 
-```{r}
+```{r warning=FALSE}
 library(htmltools)
 roll_imag <- function(pattern,path,text_tag,height = 300){
 	imags_path <- list.files(
@@ -54,6 +54,6 @@ roll_imag <- function(pattern,path,text_tag,height = 300){
 	)
 	return(browsable(html))
 }
-roll_imag(pattern = ".png$",path = "./picture/",text_tag = "example text")
+roll_imag(pattern = ".png$",path = "../picture/",text_tag = "example text")
 
 ```
